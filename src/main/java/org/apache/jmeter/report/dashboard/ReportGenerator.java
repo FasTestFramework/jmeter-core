@@ -72,7 +72,7 @@ public class ReportGenerator {
 
     private static final Logger log = LoggerFactory.getLogger(ReportGenerator.class);
 
-    private static final boolean CSV_OUTPUT_FORMAT = "xml";
+    private static final boolean CSV_OUTPUT_FORMAT = true;
 
     private static final char CSV_DEFAULT_SEPARATOR =
             // We cannot use JMeterUtils#getPropDefault as it applies a trim on value
