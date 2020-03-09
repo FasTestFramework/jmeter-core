@@ -151,6 +151,49 @@ public class ReportGenerator {
         configuration = ReportGeneratorConfiguration.loadFromProperties(merged);
     }
 
+    /**
+     * Instantiates a new report generator.
+     *
+     * @param resultsFile     the test results file
+     * @param resultCollector Can be null, used if generation occurs at end of test
+     * @throws ConfigurationException when loading configuration from file fails
+     */
+    public ReportGenerator(String resultsFile, ResultCollector resultCollector,String reportsPropertiesPath)
+            throws ConfigurationException {
+        if (!CSV_OUTPUT_FORMAT) {
+            throw new IllegalArgumentException(
+                    "Report generation requires csv output format, check 'jmeter.save.saveservice.output_format' property");
+        }
+
+        log.info("ReportGenerator will use for Parsing the separator: '{}'", CSV_DEFAULT_SEPARATOR);
+
+        File file = new File(resultsFile);
+        if (resultCollector == null) {
+            if (!(file.isFile() && file.canRead())) {
+                throw new IllegalArgumentException(String.format(
+                        "Cannot read test results file : %s", file));
+            }
+            log.info("Will only generate report from results file: {}", resultsFile);
+        } else {
+            if (file.exists() && file.length() > 0) {
+                throw new IllegalArgumentException(
+                        "Results file:" + resultsFile + " is not empty");
+            }
+            log.info("Will generate report at end of test from  results file: {}", resultsFile);
+        }
+        this.resultCollector = resultCollector;
+        this.testFile = file;
+        final Properties merged = new Properties();
+        File rgp = new File(reportsPropertiesPath);
+        if (log.isInfoEnabled()) {
+            log.info("Reading report generator properties from: {}", rgp.getAbsolutePath());
+        }
+        merged.putAll(loadProps(rgp));
+        log.info("Merging with JMeter properties");
+        merged.putAll(JMeterUtils.getJMeterProperties());
+        configuration = ReportGeneratorConfiguration.loadFromProperties(merged);
+    }
+
     private static Properties loadProps(File file) {
         final Properties props = new Properties();
         try (FileInputStream inStream = new FileInputStream(file)) {
