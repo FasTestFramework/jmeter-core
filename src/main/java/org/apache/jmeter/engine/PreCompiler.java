@@ -30,15 +30,15 @@ import org.apache.jmeter.threads.JMeterVariables;
 import org.apache.jmeter.visualizers.backend.Backend;
 import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.collections.HashTreeTraverser;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Class to replace function and variable references in the test tree.
  *
  */
 public class PreCompiler implements HashTreeTraverser {
-    private static final Logger log = LoggerFactory.getLogger(PreCompiler.class);
+    private static final Logger log = LogManager.getLogger(PreCompiler.class);
 
     private final ValueReplacer replacer;
 

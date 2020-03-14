@@ -29,8 +29,8 @@ import org.apache.jmeter.report.core.Sample;
 import org.apache.jmeter.report.core.SampleException;
 import org.apache.jmeter.report.core.SampleMetadata;
 import org.apache.jmeter.report.core.TimeHelper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Read a csv source file and write its rows (samples) all the registered
@@ -66,7 +66,7 @@ public class CsvFileSampleSource extends AbstractSampleSource {
     /** File name whose sample are being produced on the channel */
     public static final String SOURCE_FILE_ATTRIBUTE = "samplesource.file";
 
-    private static final Logger LOG = LoggerFactory.getLogger(CsvFileSampleSource.class);
+    private static final Logger LOG = LogManager.getLogger(CsvFileSampleSource.class);
 
     /** input csv files to be produced */
     private File[] inputFiles;

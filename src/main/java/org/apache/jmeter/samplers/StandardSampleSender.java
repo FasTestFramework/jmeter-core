@@ -22,8 +22,8 @@ import java.io.Serializable;
 import java.rmi.RemoteException;
 
 import org.apache.jorphan.util.JMeterError;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Default behaviour for remote testing.
@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
 public class StandardSampleSender extends AbstractSampleSender implements Serializable {
     private static final long serialVersionUID = 241L;
 
-    private static final Logger log = LoggerFactory.getLogger(StandardSampleSender.class);
+    private static final Logger log = LogManager.getLogger(StandardSampleSender.class);
 
     private final RemoteSampleListener listener;
 

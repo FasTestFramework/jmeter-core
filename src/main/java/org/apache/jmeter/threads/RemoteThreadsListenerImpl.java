@@ -29,8 +29,8 @@ import org.apache.jmeter.rmi.RmiUtils;
 import org.apache.jmeter.testelement.ThreadListener;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.reflect.ClassFinder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * RMI Implementation, client side code (ie executed on Controller)
@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
  */
 public class RemoteThreadsListenerImpl extends UnicastRemoteObject implements
         RemoteThreadsListener, ThreadListener {
-    private static final Logger log = LoggerFactory.getLogger(RemoteThreadsListenerImpl.class);
+    private static final Logger log = LogManager.getLogger(RemoteThreadsListenerImpl.class);
     private final List<RemoteThreadsLifeCycleListener> listeners = new ArrayList<>();
 
     /**

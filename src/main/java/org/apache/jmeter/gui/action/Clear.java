@@ -25,8 +25,8 @@ import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.gui.JMeterGUIComponent;
 import org.apache.jmeter.gui.tree.JMeterTreeNode;
 import org.apache.jmeter.samplers.Clearable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Handles the following actions:
@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
  * - Reset (Clear GUI)
  */
 public class Clear extends AbstractAction {
-    private static final Logger log = LoggerFactory.getLogger(Clear.class);
+    private static final Logger log = LogManager.getLogger(Clear.class);
 
     private static final Set<String> commands = new HashSet<>();
 

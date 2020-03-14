@@ -33,8 +33,8 @@ import org.apache.jmeter.gui.tree.JMeterTreeModel;
 import org.apache.jmeter.gui.tree.JMeterTreeNode;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This class serves storing Test Tree state and navigating through it
@@ -53,7 +53,7 @@ public class UndoHistory implements TreeModelListener, Serializable {
         void notifyChangeInHistory(UndoHistory history);
     }
 
-    private static final Logger log = LoggerFactory.getLogger(UndoHistory.class);
+    private static final Logger log = LogManager.getLogger(UndoHistory.class);
 
     private static final int HISTORY_SIZE = JMeterUtils.getPropDefault("undo.history.size", 0);
 

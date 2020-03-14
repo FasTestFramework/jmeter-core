@@ -30,15 +30,15 @@ import org.apache.jmeter.gui.tree.JMeterTreeListener;
 import org.apache.jmeter.gui.tree.JMeterTreeNode;
 import org.apache.jmeter.gui.util.MenuFactory;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Places a copied JMeterTreeNode under the selected node.
  */
 public class Paste extends AbstractAction {
 
-    private static final Logger log = LoggerFactory.getLogger(Paste.class);
+    private static final Logger log = LogManager.getLogger(Paste.class);
 
     private static final Set<String> commands = new HashSet<>();
 

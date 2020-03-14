@@ -30,8 +30,8 @@ import org.apache.jmeter.testelement.property.StringProperty;
 import org.apache.jmeter.util.JMeterUtils;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -61,7 +61,7 @@ import org.slf4j.LoggerFactory;
 
 public class IfController extends GenericController implements Serializable, ThreadListener {
 
-    private static final Logger log = LoggerFactory.getLogger(IfController.class);
+    private static final Logger log = LogManager.getLogger(IfController.class);
 
     private static final long serialVersionUID = 242L;
 

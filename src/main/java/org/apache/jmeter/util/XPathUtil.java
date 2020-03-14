@@ -52,8 +52,8 @@ import org.apache.jmeter.assertions.AssertionResult;
 import org.apache.xml.utils.PrefixResolver;
 import org.apache.xpath.XPathAPI;
 import org.apache.xpath.objects.XObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -81,7 +81,7 @@ import com.github.benmanes.caffeine.cache.LoadingCache;
  */
 public class XPathUtil {
 
-    private static final Logger log = LoggerFactory.getLogger(XPathUtil.class);
+    private static final Logger log = LogManager.getLogger(XPathUtil.class);
 
     private static final LoadingCache<ImmutablePair<String, String>, XPathExecutable> XPATH_CACHE;
     static {

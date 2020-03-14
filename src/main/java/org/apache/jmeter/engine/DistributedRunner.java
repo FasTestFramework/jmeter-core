@@ -33,8 +33,8 @@ import java.util.Properties;
 
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This class serves all responsibility of starting and stopping distributed tests.
@@ -46,7 +46,7 @@ import org.slf4j.LoggerFactory;
 public class DistributedRunner {
     private static final String HOST_NOT_FOUND_MESSAGE = "Host not found in list of active engines: {}";
 
-    private static final Logger log = LoggerFactory.getLogger(DistributedRunner.class);
+    private static final Logger log = LogManager.getLogger(DistributedRunner.class);
 
     public static final String RETRIES_NUMBER = "client.tries"; // $NON-NLS-1$
     public static final String RETRIES_DELAY = "client.retries_delay"; // $NON-NLS-1$

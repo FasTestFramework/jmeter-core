@@ -42,8 +42,8 @@ import org.apache.jmeter.testelement.TestElement;
 import org.apache.jmeter.timers.Timer;
 import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.collections.HashTreeTraverser;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * HashTreeTraverser implementation that traverses the Test Tree to build:
@@ -54,7 +54,7 @@ import org.slf4j.LoggerFactory;
  */
 public class TestCompiler implements HashTreeTraverser {
 
-    private static final Logger log = LoggerFactory.getLogger(TestCompiler.class);
+    private static final Logger log = LogManager.getLogger(TestCompiler.class);
 
     /**
      * This set keeps track of which ObjectPairs have been seen.

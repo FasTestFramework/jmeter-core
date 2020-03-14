@@ -44,15 +44,15 @@ import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.gui.plugin.MenuCreator;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Schematic view of Test Plan
  * @since 5.1
  */
 public class SchematicView extends AbstractAction implements MenuCreator {
-    private static final Logger log = LoggerFactory.getLogger(SchematicView.class);
+    private static final Logger log = LogManager.getLogger(SchematicView.class);
     private static final String DEFAULT_XSL_FILE =
             JMeterUtils.getProperty("docgeneration.schematic_xsl"); //$NON-NLS-1$
 

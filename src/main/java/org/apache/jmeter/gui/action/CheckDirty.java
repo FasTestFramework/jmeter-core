@@ -30,15 +30,15 @@ import org.apache.jmeter.testelement.TestElement;
 import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.collections.HashTreeTraverser;
 import org.apache.jorphan.collections.ListedHashTree;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Check if the TestPlan has been changed since it was last saved
  *
  */
 public class CheckDirty extends AbstractAction implements HashTreeTraverser, ActionListener {
-    private static final Logger log = LoggerFactory.getLogger(CheckDirty.class);
+    private static final Logger log = LogManager.getLogger(CheckDirty.class);
 
     private final Map<JMeterTreeNode, TestElement> previousGuiItems;
 

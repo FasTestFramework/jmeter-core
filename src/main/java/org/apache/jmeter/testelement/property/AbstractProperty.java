@@ -21,14 +21,14 @@ import java.util.Collection;
 import java.util.Map;
 
 import org.apache.jmeter.testelement.TestElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public abstract class AbstractProperty implements JMeterProperty {
     private static final long serialVersionUID = 241L;
 
     //TODO consider using private logs for each derived class
-    protected static final Logger log = LoggerFactory.getLogger(AbstractProperty.class);
+    protected static final Logger log = LogManager.getLogger(AbstractProperty.class);
 
     private String name;
 

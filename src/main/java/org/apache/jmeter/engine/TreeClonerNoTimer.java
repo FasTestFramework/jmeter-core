@@ -18,14 +18,14 @@
 package org.apache.jmeter.engine;
 
 import org.apache.jmeter.timers.Timer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Clones the test tree,  skipping test elements that implement {@link Timer} by default.
  */
 public class TreeClonerNoTimer extends TreeCloner{
-    private static final Logger log = LoggerFactory.getLogger(TreeClonerNoTimer.class);
+    private static final Logger log = LogManager.getLogger(TreeClonerNoTimer.class);
 
     public TreeClonerNoTimer() {
         super();

@@ -27,8 +27,8 @@ import java.util.List;
 
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.exec.SystemCommand;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class HtmlReportGenerator {
 
@@ -39,7 +39,7 @@ public class HtmlReportGenerator {
     public static final String NOT_EMPTY_DIRECTORY = "generate_report_ui.directory_not_empty";
     public static final String CANNOT_CREATE_DIRECTORY = "generate_report_ui.cannot_create_directory";
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(HtmlReportGenerator.class);
+    private static final Logger LOGGER = LogManager.getLogger(HtmlReportGenerator.class);
     private static final long COMMAND_TIMEOUT = JMeterUtils.getPropDefault("generate_report_ui.generation_timeout", 120000L);
 
     private String csvFilePath;

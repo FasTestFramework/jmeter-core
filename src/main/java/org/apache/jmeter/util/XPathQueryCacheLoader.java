@@ -20,8 +20,8 @@ package org.apache.jmeter.util;
 import java.util.List;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import net.sf.saxon.s9api.Processor;
 import net.sf.saxon.s9api.XPathCompiler;
@@ -37,7 +37,7 @@ import com.github.benmanes.caffeine.cache.CacheLoader;
  */
 public class XPathQueryCacheLoader implements CacheLoader<ImmutablePair<String, String>, XPathExecutable> {
 
-    private static final Logger log = LoggerFactory.getLogger(XPathQueryCacheLoader.class);
+    private static final Logger log = LogManager.getLogger(XPathQueryCacheLoader.class);
 
     @Override
     public XPathExecutable load(ImmutablePair<String, String> key)

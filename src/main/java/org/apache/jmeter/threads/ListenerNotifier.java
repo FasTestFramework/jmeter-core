@@ -24,8 +24,8 @@ import org.apache.jmeter.samplers.SampleEvent;
 import org.apache.jmeter.samplers.SampleListener;
 import org.apache.jmeter.testbeans.TestBeanHelper;
 import org.apache.jmeter.testelement.TestElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Processes sample events. <br>
@@ -38,7 +38,7 @@ public class ListenerNotifier implements Serializable {
      *
      */
     private static final long serialVersionUID = -4861457279068497917L;
-    private static final Logger log = LoggerFactory.getLogger(ListenerNotifier.class);
+    private static final Logger log = LogManager.getLogger(ListenerNotifier.class);
 
 
     /**

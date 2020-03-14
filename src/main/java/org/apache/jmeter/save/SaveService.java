@@ -47,8 +47,8 @@ import org.apache.jmeter.util.NameUpdater;
 import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.util.JMeterError;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.ConversionException;
@@ -68,7 +68,7 @@ import com.thoughtworks.xstream.mapper.MapperWrapper;
  */
 public class SaveService {
 
-    private static final Logger log = LoggerFactory.getLogger(SaveService.class);
+    private static final Logger log = LogManager.getLogger(SaveService.class);
 
     // Names of DataHolder entries for JTL processing
     public static final String SAMPLE_EVENT_OBJECT = "SampleEvent"; // $NON-NLS-1$

@@ -21,8 +21,8 @@ import java.io.ObjectStreamException;
 import java.io.Serializable;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 
 /**
@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
  * caching functionality (sampleStore).
  */
 public class HoldSampleSender extends AbstractSampleSender implements Serializable {
-    private static final Logger log = LoggerFactory.getLogger(HoldSampleSender.class);
+    private static final Logger log = LogManager.getLogger(HoldSampleSender.class);
 
     private static final long serialVersionUID = 241L;
 

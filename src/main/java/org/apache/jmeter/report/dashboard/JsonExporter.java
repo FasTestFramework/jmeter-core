@@ -35,8 +35,8 @@ import org.apache.jmeter.report.processor.SampleContext;
 import org.apache.jmeter.report.processor.ValueResultData;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -47,7 +47,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
  * @since 5.1
  */
 public class JsonExporter extends AbstractDataExporter {
-    private static final Logger LOGGER = LoggerFactory.getLogger(JsonExporter.class);
+    private static final Logger LOGGER = LogManager.getLogger(JsonExporter.class);
     public static final String OUTPUT_FILENAME = "statistics.json";
     private static final FileFilter JSON_FILE_FILTER =
             file -> file.isFile() && file.getName().equals(OUTPUT_FILENAME);

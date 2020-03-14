@@ -46,8 +46,8 @@ import org.apache.jmeter.report.processor.ValueResultData;
 import org.apache.jmeter.report.processor.graph.AbstractGraphConsumer;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import freemarker.template.Configuration;
 import freemarker.template.TemplateExceptionHandler;
@@ -64,7 +64,7 @@ public class HtmlTemplateExporter extends AbstractDataExporter {
     /** Format used for non null check of parameters. */
     private static final String MUST_NOT_BE_NULL = "%s must not be null";
 
-    private static final Logger log = LoggerFactory.getLogger(HtmlTemplateExporter.class);
+    private static final Logger log = LogManager.getLogger(HtmlTemplateExporter.class);
 
     public static final String DATA_CTX_REPORT_TITLE = "reportTitle";
     public static final String DATA_CTX_TESTFILE = "testFile";

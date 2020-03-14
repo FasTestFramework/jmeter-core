@@ -37,8 +37,8 @@ import javax.net.ssl.X509KeyManager;
 import javax.net.ssl.X509TrustManager;
 
 import org.apache.jmeter.util.keystore.JmeterKeyStore;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The SSLManager handles the KeyStore information for JMeter. Basically, it
@@ -52,7 +52,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 public class JsseSSLManager extends SSLManager {
-    private static final Logger log = LoggerFactory.getLogger(JsseSSLManager.class);
+    private static final Logger log = LogManager.getLogger(JsseSSLManager.class);
 
     // Temporary fix to allow default protocol to be changed
     private static final String DEFAULT_SSL_PROTOCOL =

@@ -43,8 +43,8 @@ import org.apache.jmeter.threads.JMeterContext;
 import org.apache.jmeter.threads.JMeterContextService;
 import org.apache.jmeter.threads.JMeterVariables;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Base class for JSR223 Test elements
@@ -54,7 +54,7 @@ public abstract class JSR223TestElement extends ScriptingTestElement
 {
     private static final long serialVersionUID = 232L;
 
-    private static final Logger logger = LoggerFactory.getLogger(JSR223TestElement.class);
+    private static final Logger logger = LogManager.getLogger(JSR223TestElement.class);
     /**
      * Cache of compiled scripts
      */
@@ -124,7 +124,7 @@ public abstract class JSR223TestElement extends ScriptingTestElement
         final String fileName = getFilename();
         final String scriptParameters = getParameters();
         // Use actual class name for log
-        final Logger elementLogger = LoggerFactory.getLogger(getClass().getName()+"."+getName());
+        final Logger elementLogger = LogManager.getLogger(getClass().getName()+"."+getName());
         bindings.put("log", elementLogger); // $NON-NLS-1$ (this name is fixed)
         bindings.put("Label", label); // $NON-NLS-1$ (this name is fixed)
         bindings.put("FileName", fileName); // $NON-NLS-1$ (this name is fixed)

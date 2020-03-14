@@ -27,8 +27,8 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Derived from EasySSLProtocolFactory
@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 public class HttpSSLProtocolSocketFactory
     extends SSLSocketFactory {// for java sockets
 
-    private static final Logger log = LoggerFactory.getLogger(HttpSSLProtocolSocketFactory.class);
+    private static final Logger log = LogManager.getLogger(HttpSSLProtocolSocketFactory.class);
 
     private static final String PROTOCOL_LIST =
             JMeterUtils.getPropDefault("https.socket.protocols", ""); // $NON-NLS-1$ $NON-NLS-2$

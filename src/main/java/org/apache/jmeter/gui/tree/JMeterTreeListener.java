@@ -36,11 +36,11 @@ import org.apache.jmeter.gui.MainFrame;
 import org.apache.jmeter.gui.action.ActionNames;
 import org.apache.jmeter.gui.action.ActionRouter;
 import org.apache.jmeter.gui.action.KeyStrokes;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class JMeterTreeListener implements TreeSelectionListener, MouseListener, KeyListener {
-    private static final Logger log = LoggerFactory.getLogger(JMeterTreeListener.class);
+    private static final Logger log = LogManager.getLogger(JMeterTreeListener.class);
 
     private TreePath currentPath;
 

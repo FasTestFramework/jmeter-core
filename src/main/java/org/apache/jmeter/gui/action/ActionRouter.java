@@ -40,11 +40,11 @@ import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.reflect.ClassFinder;
 import org.apache.jorphan.util.JMeterError;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public final class ActionRouter implements ActionListener {
-    private static final Logger log = LoggerFactory.getLogger(ActionRouter.class);
+    private static final Logger log = LogManager.getLogger(ActionRouter.class);
 
     // This is cheap, so no need to resort to IODH or lazy init
     private static final ActionRouter INSTANCE = new ActionRouter();

@@ -33,8 +33,8 @@ import org.apache.jmeter.report.core.SampleMetadata;
 import org.apache.jmeter.report.processor.AbstractSampleConsumer;
 import org.apache.jmeter.report.processor.MapResultData;
 import org.apache.jmeter.report.processor.ValueResultData;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The class AbstractOverTimeGraphConsumer provides a base class for over time
@@ -168,7 +168,7 @@ public abstract class AbstractVersusRequestsGraphConsumer extends
 
     private static class TimeCountConsumer extends AbstractSampleConsumer {
 
-        private static final Logger log = LoggerFactory.getLogger(TimeCountConsumer.class);
+        private static final Logger log = LogManager.getLogger(TimeCountConsumer.class);
 
         private static class FileInfo {
             private final File file;

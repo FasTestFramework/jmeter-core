@@ -34,8 +34,8 @@ import javax.swing.JPasswordField;
 import org.apache.commons.lang3.Validate;
 import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.util.keystore.JmeterKeyStore;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The SSLManager handles the KeyStore information for JMeter. Basically, it
@@ -49,7 +49,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 public abstract class SSLManager {
-    private static final Logger log = LoggerFactory.getLogger(SSLManager.class);
+    private static final Logger log = LogManager.getLogger(SSLManager.class);
 
     private static final String SSL_TRUST_STORE = "javax.net.ssl.trustStore";// $NON-NLS-1$
 

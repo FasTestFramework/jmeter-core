@@ -24,8 +24,8 @@ import java.lang.reflect.Method;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jorphan.util.JMeterError;
 import org.apache.jorphan.util.JMeterException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * BeanShell setup function - encapsulates all the access to the BeanShell
@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
  */
 
 public class BeanShellInterpreter {
-    private static final Logger log = LoggerFactory.getLogger(BeanShellInterpreter.class);
+    private static final Logger log = LogManager.getLogger(BeanShellInterpreter.class);
 
     private static final Method bshGet;
 

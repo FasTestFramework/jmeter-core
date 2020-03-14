@@ -63,8 +63,8 @@ import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.documentation.VisibleForTesting;
 import org.apache.jorphan.gui.ComponentUtil;
 import org.apache.jorphan.gui.JLabeledTextField;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Dialog to search in tree of element
@@ -73,7 +73,7 @@ public class SearchTreeDialog extends JDialog implements ActionListener { // NOS
 
     private static final long serialVersionUID = -4436834972710248247L;
 
-    private static final Logger logger = LoggerFactory.getLogger(SearchTreeDialog.class);
+    private static final Logger logger = LogManager.getLogger(SearchTreeDialog.class);
 
     private static final Font FONT_DEFAULT = UIManager.getDefaults().getFont("TextField.font");
 

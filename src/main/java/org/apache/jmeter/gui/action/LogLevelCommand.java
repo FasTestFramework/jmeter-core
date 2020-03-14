@@ -22,8 +22,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.logging.log4j.core.config.Configurator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.slf4j.event.Level;
 
 /**
@@ -32,7 +32,7 @@ import org.slf4j.event.Level;
  */
 public class LogLevelCommand extends AbstractAction {
 
-    private static final Logger log = LoggerFactory.getLogger(LogLevelCommand.class);
+    private static final Logger log = LogManager.getLogger(LogLevelCommand.class);
 
     private static final Set<String> commands = new HashSet<>();
 

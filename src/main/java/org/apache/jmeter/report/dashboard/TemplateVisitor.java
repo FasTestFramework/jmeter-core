@@ -33,8 +33,8 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.jmeter.report.core.DataContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -47,7 +47,7 @@ import freemarker.template.TemplateException;
  * @since 3.0
  */
 public class TemplateVisitor extends SimpleFileVisitor<Path> {
-    private static final Logger LOGGER = LoggerFactory.getLogger(TemplateVisitor.class);
+    private static final Logger LOGGER = LogManager.getLogger(TemplateVisitor.class);
     public static final String TEMPLATED_FILE_EXT = "fmkr";
 
     private final Path source;

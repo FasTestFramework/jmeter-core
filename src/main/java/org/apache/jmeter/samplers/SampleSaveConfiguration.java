@@ -32,8 +32,8 @@ import org.apache.jmeter.save.CSVSaveService;
 import org.apache.jmeter.testelement.TestPlan;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.util.JMeterError;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /*
  * N.B. to add a new field, remember the following
@@ -69,7 +69,7 @@ import org.slf4j.LoggerFactory;
 public class SampleSaveConfiguration implements Cloneable, Serializable {
     private static final long serialVersionUID = 8L;
 
-    private static final Logger log = LoggerFactory.getLogger(SampleSaveConfiguration.class);
+    private static final Logger log = LogManager.getLogger(SampleSaveConfiguration.class);
 
     // ---------------------------------------------------------------------
     // PROPERTY FILE CONSTANTS

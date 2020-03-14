@@ -38,8 +38,8 @@ import org.apache.jmeter.testelement.TestStateListener;
 import org.apache.jmeter.threads.JMeterContextService;
 import org.apache.jorphan.util.JMeterStopTestNowException;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Save Result responseData to a set of files
@@ -49,7 +49,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 public class ResultSaver extends AbstractTestElement implements NoThreadClone, Serializable, SampleListener, TestStateListener {
-    private static final Logger log = LoggerFactory.getLogger(ResultSaver.class);
+    private static final Logger log = LogManager.getLogger(ResultSaver.class);
 
     private static final long serialVersionUID = 242L;
 

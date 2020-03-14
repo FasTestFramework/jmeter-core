@@ -25,8 +25,8 @@ import org.apache.jmeter.engine.StandardJMeterEngine;
 import org.apache.jmeter.functions.Function;
 import org.apache.jmeter.functions.InvalidVariableException;
 import org.apache.jmeter.testelement.TestStateListener;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Parses function / variable references of the form
@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
  * ${variableName}
  */
 class FunctionParser {
-    private static final Logger log = LoggerFactory.getLogger(FunctionParser.class);
+    private static final Logger log = LogManager.getLogger(FunctionParser.class);
 
     /**
      * Compile a general string into a list of elements for a CompoundVariable.

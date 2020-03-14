@@ -67,13 +67,13 @@ import org.apache.jorphan.gui.ComponentUtil;
 import org.apache.jorphan.gui.GuiUtils;
 import org.apache.jorphan.gui.JLabeledChoice;
 import org.apache.jorphan.gui.JLabeledTextField;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class FunctionHelper extends JDialog implements ActionListener, ChangeListener, LocaleChangeListener {
     private static final long serialVersionUID = 240L;
 
-    private static final Logger log = LoggerFactory.getLogger(FunctionHelper.class);
+    private static final Logger log = LogManager.getLogger(FunctionHelper.class);
 
     private static final String GENERATE = "GENERATE";
 

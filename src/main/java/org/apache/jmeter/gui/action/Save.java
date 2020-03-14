@@ -54,8 +54,8 @@ import org.apache.jmeter.threads.ThreadGroup;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.collections.ListedHashTree;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Save the current test plan; implements:
@@ -64,7 +64,7 @@ import org.slf4j.LoggerFactory;
  * Save (Selection) As
  */
 public class Save extends AbstractAction {
-    private static final Logger log = LoggerFactory.getLogger(Save.class);
+    private static final Logger log = LogManager.getLogger(Save.class);
 
     private static final List<File> EMPTY_FILE_LIST = Collections.emptyList();
 

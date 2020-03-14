@@ -27,8 +27,8 @@ import javax.swing.filechooser.FileFilter;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.gui.JMeterFileFilter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Class implementing a file open dialogue
@@ -41,7 +41,7 @@ public final class FileDialoger {
 
     private static JFileChooser jfc = new JFileChooser();
 
-    private static final Logger LOG = LoggerFactory.getLogger(FileDialoger.class);
+    private static final Logger LOG = LogManager.getLogger(FileDialoger.class);
 
     /**
      * Prevent instantiation of utility class.

@@ -69,8 +69,8 @@ import org.apache.oro.text.PatternCacheLRU;
 import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.Perl5Compiler;
 import org.apache.oro.text.regex.Perl5Matcher;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.security.AnyTypePermission;
@@ -81,7 +81,7 @@ import com.thoughtworks.xstream.security.NoTypePermission;
  *
  */
 public class JMeterUtils implements UnitTestManager {
-    private static final Logger log = LoggerFactory.getLogger(JMeterUtils.class);
+    private static final Logger log = LogManager.getLogger(JMeterUtils.class);
 
     private static final String JMETER_VARS_PREFIX = "__jm__";
     public static final String THREAD_GROUP_DISTRIBUTED_PREFIX_PROPERTY_NAME = "__jm.D_TG";

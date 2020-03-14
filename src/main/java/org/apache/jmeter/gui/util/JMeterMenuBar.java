@@ -53,14 +53,14 @@ import org.apache.jmeter.util.LocaleChangeListener;
 import org.apache.jmeter.util.SSLManager;
 import org.apache.jorphan.reflect.ClassFinder;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.slf4j.event.Level;
 
 public class JMeterMenuBar extends JMenuBar implements LocaleChangeListener {
     private static final long serialVersionUID = 241L;
 
-    private static final Logger log = LoggerFactory.getLogger(JMeterMenuBar.class);
+    private static final Logger log = LogManager.getLogger(JMeterMenuBar.class);
 
     private JMenu fileMenu;
     private JMenuItem fileSaveAs;

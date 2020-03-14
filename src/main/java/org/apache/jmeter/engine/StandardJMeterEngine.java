@@ -44,8 +44,8 @@ import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.collections.ListedHashTree;
 import org.apache.jorphan.collections.SearchByClass;
 import org.apache.jorphan.util.JMeterStopTestException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Runs JMeter tests, either directly for local GUI and non-GUI invocations,
@@ -53,7 +53,7 @@ import org.slf4j.LoggerFactory;
  */
 public class StandardJMeterEngine implements JMeterEngine, Runnable {
 
-    private static final Logger log = LoggerFactory.getLogger(StandardJMeterEngine.class);
+    private static final Logger log = LogManager.getLogger(StandardJMeterEngine.class);
 
     // Should we exit at end of the test? (only applies to server, because host is non-null)
     private static final boolean EXIT_AFTER_TEST =

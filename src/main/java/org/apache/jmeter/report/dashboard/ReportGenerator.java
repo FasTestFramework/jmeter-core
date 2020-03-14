@@ -58,8 +58,8 @@ import org.apache.jmeter.reporters.ResultCollector;
 import org.apache.jmeter.samplers.SampleSaveConfiguration;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.oro.text.regex.PatternMatcher;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The class ReportGenerator provides a way to generate all the templated files
@@ -70,7 +70,7 @@ import org.slf4j.LoggerFactory;
 public class ReportGenerator {
     private static final String REPORTGENERATOR_PROPERTIES = "reportgenerator.properties";
 
-    private static final Logger log = LoggerFactory.getLogger(ReportGenerator.class);
+    private static final Logger log = LogManager.getLogger(ReportGenerator.class);
 
     private static final boolean CSV_OUTPUT_FORMAT = true;
 

@@ -30,8 +30,8 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -50,7 +50,7 @@ public class TemplateManager {
     private static final String TEMPLATE_FILES = JMeterUtils.getPropDefault("template.files", // $NON-NLS-1$
             "/bin/templates/templates.xml");
 
-    private static final Logger log = LoggerFactory.getLogger(TemplateManager.class);
+    private static final Logger log = LogManager.getLogger(TemplateManager.class);
 
     private static final TemplateManager SINGLETON = new TemplateManager();
 

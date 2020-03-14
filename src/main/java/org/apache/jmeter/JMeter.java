@@ -110,8 +110,8 @@ import org.apache.jorphan.util.JOrphanUtils;
 import org.apache.jorphan.util.ThreadDumper;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.config.Configurator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.thoughtworks.xstream.converters.ConversionException;
 
@@ -121,7 +121,7 @@ import com.thoughtworks.xstream.converters.ConversionException;
 public class JMeter implements JMeterPlugin {
     private static final String JSR223_INIT_FILE = "jsr223.init.file";
 
-    private static final Logger log = LoggerFactory.getLogger(JMeter.class);
+    private static final Logger log = LogManager.getLogger(JMeter.class);
 
     public static final int UDP_PORT_DEFAULT = ShutdownClient.UDP_PORT_DEFAULT;
 
@@ -708,7 +708,7 @@ public class JMeter implements JMeterPlugin {
                         engine = scriptEngineManager.getEngineByName(extension);
                     }
                     Bindings bindings = engine.createBindings();
-                    final Logger logger = LoggerFactory.getLogger(JSR223_INIT_FILE);
+                    final Logger logger = LogManager.getLogger(JSR223_INIT_FILE);
                     bindings.put("log", logger); // $NON-NLS-1$ (this name is fixed)
                     Properties props = JMeterUtils.getJMeterProperties();
                     bindings.put("props", props); // $NON-NLS-1$ (this name is fixed)

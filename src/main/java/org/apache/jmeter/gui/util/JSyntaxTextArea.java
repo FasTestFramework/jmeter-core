@@ -28,8 +28,8 @@ import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import org.fife.ui.rsyntaxtextarea.SyntaxConstants;
 import org.fife.ui.rsyntaxtextarea.Theme;
 import org.fife.ui.rtextarea.RUndoManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Utility class to handle RSyntaxTextArea code
@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
 public class JSyntaxTextArea extends RSyntaxTextArea {
 
     private static final long serialVersionUID = 211L;
-    private static final Logger log              = LoggerFactory.getLogger(JSyntaxTextArea.class);
+    private static final Logger log              = LogManager.getLogger(JSyntaxTextArea.class);
 
     private static final Theme DARCULA_THEME = initTheme();
 

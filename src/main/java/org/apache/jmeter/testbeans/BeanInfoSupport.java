@@ -32,8 +32,8 @@ import java.util.ResourceBundle;
 import org.apache.jmeter.testbeans.gui.GenericTestBeanCustomizer;
 import org.apache.jmeter.testbeans.gui.TypeEditor;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Support class for test bean beanInfo objects. It will help using the
@@ -62,7 +62,7 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class BeanInfoSupport extends SimpleBeanInfo {
 
-    private static final Logger log = LoggerFactory.getLogger(BeanInfoSupport.class);
+    private static final Logger log = LogManager.getLogger(BeanInfoSupport.class);
 
     // Some known attribute names, just for convenience:
     public static final String TAGS = GenericTestBeanCustomizer.TAGS;

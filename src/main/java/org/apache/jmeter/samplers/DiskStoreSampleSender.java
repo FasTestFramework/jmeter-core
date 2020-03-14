@@ -34,15 +34,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.jorphan.util.JMeterError;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Version of HoldSampleSender that stores the samples on disk as a serialised stream.
  */
 
 public class DiskStoreSampleSender extends AbstractSampleSender implements Serializable {
-    private static final Logger log = LoggerFactory.getLogger(DiskStoreSampleSender.class);
+    private static final Logger log = LogManager.getLogger(DiskStoreSampleSender.class);
 
     private static final long serialVersionUID = 253L;
 

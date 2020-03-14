@@ -36,8 +36,8 @@ import org.apache.jmeter.testelement.property.NullProperty;
 import org.apache.jmeter.testelement.property.TestElementProperty;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.util.Converter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This is an experimental class. An attempt to address the complexity of
@@ -50,7 +50,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 public class TestBeanHelper {
-    protected static final Logger log = LoggerFactory.getLogger(TestBeanHelper.class);
+    protected static final Logger log = LogManager.getLogger(TestBeanHelper.class);
 
     /**
      * Prepare the bean for work by populating the bean's properties from the

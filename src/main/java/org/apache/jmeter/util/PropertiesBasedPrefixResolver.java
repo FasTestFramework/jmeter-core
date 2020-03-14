@@ -30,15 +30,15 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.jorphan.util.JOrphanUtils;
 import org.apache.xml.utils.PrefixResolver;
 import org.apache.xml.utils.PrefixResolverDefault;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.w3c.dom.Node;
 
 /**
  * {@link PrefixResolver} implementation that loads prefix configuration from jmeter property xpath.namespace.config
  */
 public class PropertiesBasedPrefixResolver extends PrefixResolverDefault {
-    private static final Logger log = LoggerFactory.getLogger(PropertiesBasedPrefixResolver.class);
+    private static final Logger log = LogManager.getLogger(PropertiesBasedPrefixResolver.class);
     private static final String XPATH_NAMESPACE_CONFIG = "xpath.namespace.config";
     private static final Map<String, String> NAMESPACE_MAP = new HashMap<>();
     static {

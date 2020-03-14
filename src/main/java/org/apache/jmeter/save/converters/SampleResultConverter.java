@@ -31,8 +31,8 @@ import org.apache.jmeter.samplers.SampleResult;
 import org.apache.jmeter.samplers.SampleSaveConfiguration;
 import org.apache.jmeter.save.SaveService;
 import org.apache.jorphan.util.Converter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
@@ -45,7 +45,7 @@ import com.thoughtworks.xstream.mapper.Mapper;
  * XStream Converter for the SampleResult class
  */
 public class SampleResultConverter extends AbstractCollectionConverter {
-    private static final Logger log = LoggerFactory.getLogger(SampleResultConverter.class);
+    private static final Logger log = LogManager.getLogger(SampleResultConverter.class);
 
     private static final String JAVA_LANG_STRING = "java.lang.String"; //$NON-NLS-1$
     private static final String ATT_CLASS = "class"; //$NON-NLS-1$

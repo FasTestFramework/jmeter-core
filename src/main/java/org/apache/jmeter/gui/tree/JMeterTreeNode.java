@@ -36,13 +36,13 @@ import org.apache.jmeter.gui.GUIFactory;
 import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.testbeans.TestBean;
 import org.apache.jmeter.testelement.TestElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class JMeterTreeNode extends DefaultMutableTreeNode implements NamedTreeNode {
     private static final long serialVersionUID = 241L;
 
-    private static final Logger log = LoggerFactory.getLogger(JMeterTreeNode.class);
+    private static final Logger log = LogManager.getLogger(JMeterTreeNode.class);
 
     private static final int TEST_PLAN_LEVEL = 1;
 

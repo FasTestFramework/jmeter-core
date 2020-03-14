@@ -20,12 +20,12 @@ package org.apache.jmeter.samplers;
 import java.lang.reflect.Constructor;
 
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class SampleSenderFactory {
 
-    private static final Logger log = LoggerFactory.getLogger(SampleSenderFactory.class);
+    private static final Logger log = LogManager.getLogger(SampleSenderFactory.class);
 
     private static final String MODE_STANDARD = "Standard"; // $NON-NLS-1$
     private static final String MODE_BATCH = "Batch"; // $NON-NLS-1$

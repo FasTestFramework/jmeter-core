@@ -25,8 +25,8 @@ import java.util.Set;
 
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.util.JMeterError;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Change language
@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 public class ChangeLanguage extends AbstractActionWithNoRunningTest {
     private static final Set<String> commands = new HashSet<>();
 
-    private static final Logger log = LoggerFactory.getLogger(ChangeLanguage.class);
+    private static final Logger log = LogManager.getLogger(ChangeLanguage.class);
 
     static {
         commands.add(ActionNames.CHANGE_LANGUAGE);

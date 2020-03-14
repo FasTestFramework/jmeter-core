@@ -32,13 +32,13 @@ import org.apache.jmeter.testelement.property.JMeterProperty;
 import org.apache.jmeter.testelement.property.TestElementProperty;
 import org.apache.jmeter.threads.AbstractThreadGroup;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class TestPlan extends AbstractTestElement implements Serializable, TestStateListener {
     private static final long serialVersionUID = 234L;
 
-    private static final Logger log = LoggerFactory.getLogger(TestPlan.class);
+    private static final Logger log = LogManager.getLogger(TestPlan.class);
 
     //+ JMX field names - do not change values
     private static final String FUNCTIONAL_MODE = "TestPlan.functional_mode"; //$NON-NLS-1$

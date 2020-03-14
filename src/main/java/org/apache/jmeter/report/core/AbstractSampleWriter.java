@@ -30,8 +30,8 @@ import java.nio.charset.StandardCharsets;
 import org.apache.commons.lang3.Validate;
 import org.apache.jmeter.save.SaveService;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Base class for implementing sample writer.<br>
@@ -51,7 +51,7 @@ public abstract class AbstractSampleWriter extends SampleWriter {
 
     private static final String CHARSET = SaveService.getFileEncoding(StandardCharsets.UTF_8.displayName());
 
-    private static Logger log = LoggerFactory.getLogger(AbstractSampleWriter.class);
+    private static Logger log = LogManager.getLogger(AbstractSampleWriter.class);
 
     /** output writer to write samples to */
     protected PrintWriter writer;

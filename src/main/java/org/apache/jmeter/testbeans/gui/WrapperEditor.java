@@ -28,8 +28,8 @@ import javax.swing.JOptionPane;
 
 import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This is an implementation of a full-fledged property editor, providing both
@@ -55,7 +55,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 class WrapperEditor extends PropertyEditorSupport implements PropertyChangeListener {
-    private static final Logger log = LoggerFactory.getLogger(WrapperEditor.class);
+    private static final Logger log = LogManager.getLogger(WrapperEditor.class);
 
     /** The type's property editor. */
     private final PropertyEditor typeEditor;

@@ -64,8 +64,8 @@ import org.apache.jmeter.util.TemplateUtil;
 import org.apache.jorphan.gui.ComponentUtil;
 import org.apache.jorphan.gui.JLabeledChoice;
 import org.apache.jorphan.gui.JLabeledTextField;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
@@ -86,7 +86,7 @@ public class SelectTemplatesDialog extends JDialog implements ChangeListener, Ac
 
     private static final Font FONT_SMALL = new Font("SansSerif", Font.PLAIN, (int) Math.round(FONT_DEFAULT.getSize() * 0.8)); //$NON-NLS-1$
 
-    private static final Logger log = LoggerFactory.getLogger(SelectTemplatesDialog.class);
+    private static final Logger log = LogManager.getLogger(SelectTemplatesDialog.class);
 
     private final JLabeledChoice templateList = new JLabeledChoice(JMeterUtils.getResString("template_choose"), false); //$NON-NLS-1$
 

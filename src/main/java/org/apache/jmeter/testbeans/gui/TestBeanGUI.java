@@ -67,8 +67,8 @@ import org.apache.jmeter.util.LocaleChangeListener;
 import org.apache.jmeter.visualizers.Visualizer;
 import org.apache.jmeter.visualizers.gui.AbstractVisualizer;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * JMeter GUI element editing for TestBean elements.
@@ -92,7 +92,7 @@ import org.slf4j.LoggerFactory;
 public class TestBeanGUI extends AbstractJMeterGuiComponent implements JMeterGUIComponent, LocaleChangeListener{
     private static final long serialVersionUID = 241L;
 
-    private static final Logger log = LoggerFactory.getLogger(TestBeanGUI.class);
+    private static final Logger log = LogManager.getLogger(TestBeanGUI.class);
 
     private final Class<?> testBeanClass;
     private transient BeanInfo beanInfo;

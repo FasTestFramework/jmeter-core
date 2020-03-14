@@ -38,8 +38,8 @@ import org.apache.jmeter.report.core.Sample;
 import org.apache.jmeter.report.core.SampleComparator;
 import org.apache.jmeter.report.core.SampleException;
 import org.apache.jmeter.report.core.SampleMetadata;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * R-way external sample sorter.
@@ -82,7 +82,7 @@ public class ExternalSampleSorter extends AbstractSampleConsumer {
 
     private static final String MUST_NOT_BE_NULL = "%s must not be null";
 
-    private static final Logger LOG = LoggerFactory.getLogger(ExternalSampleSorter.class);
+    private static final Logger LOG = LogManager.getLogger(ExternalSampleSorter.class);
 
     private static final int DEFAULT_CHUNK_SIZE = 50000;
 

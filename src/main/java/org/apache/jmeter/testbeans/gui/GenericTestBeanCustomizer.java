@@ -43,8 +43,8 @@ import org.apache.commons.lang3.ClassUtils;
 import org.apache.jmeter.gui.ClearGui;
 import org.apache.jmeter.testbeans.TestBeanHelper;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The GenericTestBeanCustomizer is designed to provide developers with a
@@ -98,7 +98,7 @@ import org.slf4j.LoggerFactory;
 public class GenericTestBeanCustomizer extends JPanel implements SharedCustomizer {
     private static final long serialVersionUID = 241L;
 
-    private static final Logger log = LoggerFactory.getLogger(GenericTestBeanCustomizer.class);
+    private static final Logger log = LogManager.getLogger(GenericTestBeanCustomizer.class);
 
     // Need to register Editors for Java classes because we cannot create them
     // in the same package, nor can we create them in the built-in search patch of packages,

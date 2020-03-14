@@ -50,8 +50,8 @@ import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.gui.GuiUtils;
 import org.apache.jorphan.gui.ObjectTableModel;
 import org.apache.jorphan.reflect.Functor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Table editor for TestBean GUI properties.
@@ -61,7 +61,7 @@ import org.slf4j.LoggerFactory;
  * </ul>
  */
 public class TableEditor extends PropertyEditorSupport implements FocusListener,TestBeanPropertyEditor,TableModelListener, ClearGui {
-    private static final Logger log = LoggerFactory.getLogger(TableEditor.class);
+    private static final Logger log = LogManager.getLogger(TableEditor.class);
 
     /**
      * attribute name for class name of a table row;

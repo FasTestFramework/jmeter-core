@@ -26,13 +26,13 @@ import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.xml.sax.ContentHandler;
 
 public class Document {
 
-    private static final Logger log = LoggerFactory.getLogger(Document.class);
+    private static final Logger log = LogManager.getLogger(Document.class);
 
     // Maximum size to convert a document to text (default 10Mb)
     private static final int MAX_DOCUMENT_SIZE =

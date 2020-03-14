@@ -32,8 +32,8 @@ import org.apache.jmeter.testelement.property.LongProperty;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.ListedHashTree;
 import org.apache.jorphan.util.JMeterStopTestException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * ThreadGroup holds the settings for a JMeter thread group.
@@ -44,7 +44,7 @@ import org.slf4j.LoggerFactory;
 public class ThreadGroup extends AbstractThreadGroup {
     private static final long serialVersionUID = 282L;
 
-    private static final Logger log = LoggerFactory.getLogger(ThreadGroup.class);
+    private static final Logger log = LogManager.getLogger(ThreadGroup.class);
 
     private static final long WAIT_TO_DIE = JMeterUtils.getPropDefault("jmeterengine.threadstop.wait", 5 * 1000); // 5 seconds
 

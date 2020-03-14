@@ -59,15 +59,15 @@ import org.apache.jorphan.util.JMeterError;
 import org.apache.jorphan.util.JMeterStopTestException;
 import org.apache.jorphan.util.JMeterStopTestNowException;
 import org.apache.jorphan.util.JMeterStopThreadException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The JMeter interface to the sampling process, allowing JMeter to see the
  * timing, add listeners for sampling events and to stop the sampling process.
  */
 public class JMeterThread implements Runnable, Interruptible {
-    private static final Logger log = LoggerFactory.getLogger(JMeterThread.class);
+    private static final Logger log = LogManager.getLogger(JMeterThread.class);
 
     public static final String PACKAGE_OBJECT = "JMeterThread.pack"; // $NON-NLS-1$
 

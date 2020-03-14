@@ -48,12 +48,12 @@ import org.apache.jmeter.gui.util.JSyntaxTextArea;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.gui.ComponentUtil;
 import org.fife.ui.rsyntaxtextarea.SyntaxConstants;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class HtmlReportUI implements ActionListener {
     private static Set<String> commands = new HashSet<>();
-    private static final Logger LOGGER = LoggerFactory.getLogger(HtmlReportUI.class);
+    private static final Logger LOGGER = LogManager.getLogger(HtmlReportUI.class);
 
     private static final String CREATE_REQUEST = "CREATE_REQUEST";
     private static final String BROWSE_CSV = "BROWSE_CSV";

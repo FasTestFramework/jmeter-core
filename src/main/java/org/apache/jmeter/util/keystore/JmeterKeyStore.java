@@ -38,15 +38,15 @@ import java.util.Objects;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jmeter.threads.JMeterContextService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Use this Keystore for JMeter specific KeyStores.
  */
 public final class JmeterKeyStore {
 
-    private static final Logger log = LoggerFactory.getLogger(JmeterKeyStore.class);
+    private static final Logger log = LogManager.getLogger(JmeterKeyStore.class);
 
     public static final String DEFAULT_ALIAS_VAR_NAME = "certAlias";
 

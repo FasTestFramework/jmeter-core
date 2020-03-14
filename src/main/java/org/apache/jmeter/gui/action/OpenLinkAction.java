@@ -26,12 +26,12 @@ import java.util.Set;
 
 import javax.swing.JOptionPane;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class OpenLinkAction extends AbstractAction {
 
-    private static final Logger log = LoggerFactory.getLogger(OpenLinkAction.class);
+    private static final Logger log = LogManager.getLogger(OpenLinkAction.class);
 
     private static final Map<String, String> LINK_MAP =
             initLinkMap();

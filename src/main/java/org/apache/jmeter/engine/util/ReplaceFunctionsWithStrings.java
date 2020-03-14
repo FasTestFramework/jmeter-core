@@ -32,8 +32,8 @@ import org.apache.oro.text.regex.PatternMatcher;
 import org.apache.oro.text.regex.Perl5Compiler;
 import org.apache.oro.text.regex.StringSubstitution;
 import org.apache.oro.text.regex.Util;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Transforms strings into variable references (in spite of the name, which
@@ -41,7 +41,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 public class ReplaceFunctionsWithStrings extends AbstractTransformer {
-    private static final Logger log = LoggerFactory.getLogger(ReplaceFunctionsWithStrings.class);
+    private static final Logger log = LogManager.getLogger(ReplaceFunctionsWithStrings.class);
 
     /**
      * Functions are wrapped in ${ and }

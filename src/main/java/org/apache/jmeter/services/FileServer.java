@@ -39,8 +39,8 @@ import org.apache.jmeter.gui.JMeterFileFilter;
 import org.apache.jmeter.save.CSVSaveService;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This class provides thread-safe access to files, and to
@@ -56,7 +56,7 @@ import org.slf4j.LoggerFactory;
  */
 public class FileServer {
 
-    private static final Logger log = LoggerFactory.getLogger(FileServer.class);
+    private static final Logger log = LogManager.getLogger(FileServer.class);
 
     /**
      * The default base used for resolving relative files, i.e.<br/>

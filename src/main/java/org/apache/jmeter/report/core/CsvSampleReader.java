@@ -36,8 +36,8 @@ import org.apache.jmeter.save.CSVSaveService;
 import org.apache.jmeter.save.SaveService;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 
 /**
@@ -49,7 +49,7 @@ import org.slf4j.LoggerFactory;
  */
 public class CsvSampleReader implements Closeable{
 
-    private static final Logger log = LoggerFactory.getLogger(CsvSampleReader.class);
+    private static final Logger log = LogManager.getLogger(CsvSampleReader.class);
 
     private static final int BUF_SIZE = 1024 * 1024;
     private static final String CHARSET = SaveService.getFileEncoding(StandardCharsets.UTF_8.displayName());

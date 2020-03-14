@@ -30,15 +30,15 @@ import org.apache.jmeter.gui.tree.JMeterTreeNode;
 import org.apache.jmeter.samplers.Sampler;
 import org.apache.jmeter.threads.ThreadGroup;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Add ThinkTime (TestAction + UniformRandomTimer)
  * @since 3.2
  */
 public class AddThinkTimeBetweenEachStep extends AbstractAction {
-    private static final Logger log = LoggerFactory.getLogger(AddThinkTimeBetweenEachStep.class);
+    private static final Logger log = LogManager.getLogger(AddThinkTimeBetweenEachStep.class);
 
     private static final Set<String> commands = new HashSet<>();
 

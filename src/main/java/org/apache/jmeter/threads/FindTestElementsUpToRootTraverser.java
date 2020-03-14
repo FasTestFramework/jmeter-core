@@ -25,15 +25,15 @@ import org.apache.jmeter.control.Controller;
 import org.apache.jmeter.testelement.TestElement;
 import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.collections.HashTreeTraverser;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * HashTreeTraverser implementation that stores in a Stack all
  * the Test Elements on the path to a particular node.
  */
 public class FindTestElementsUpToRootTraverser implements HashTreeTraverser {
-    private static final Logger log = LoggerFactory.getLogger(FindTestElementsUpToRootTraverser.class);
+    private static final Logger log = LogManager.getLogger(FindTestElementsUpToRootTraverser.class);
 
     private final LinkedList<TestElement> stack = new LinkedList<>();
 

@@ -25,14 +25,14 @@ import java.util.Set;
 import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.gui.tree.JMeterTreeNode;
 import org.apache.jmeter.testelement.TestElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Implements the Add Parent menu command
  */
 public class AddParent extends AbstractAction {
-    private static final Logger log = LoggerFactory.getLogger(AddParent.class);
+    private static final Logger log = LogManager.getLogger(AddParent.class);
 
     private static final Set<String> commands = new HashSet<>();
 

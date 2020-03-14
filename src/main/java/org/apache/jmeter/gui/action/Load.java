@@ -39,8 +39,8 @@ import org.apache.jmeter.testelement.TestElement;
 import org.apache.jmeter.testelement.TestPlan;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.thoughtworks.xstream.converters.ConversionException;
 import com.thoughtworks.xstream.io.StreamException;
@@ -50,7 +50,7 @@ import com.thoughtworks.xstream.io.StreamException;
  *
  */
 public class Load extends AbstractActionWithNoRunningTest {
-    private static final Logger log = LoggerFactory.getLogger(Load.class);
+    private static final Logger log = LogManager.getLogger(Load.class);
 
     private static final boolean EXPAND_TREE = JMeterUtils.getPropDefault("onload.expandtree", false); //$NON-NLS-1$
 

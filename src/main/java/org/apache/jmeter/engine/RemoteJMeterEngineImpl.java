@@ -31,8 +31,8 @@ import org.apache.jmeter.rmi.RmiUtils;
 import org.apache.jmeter.services.FileServer;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This is the JMeter server main code.
@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
 public final class RemoteJMeterEngineImpl extends java.rmi.server.UnicastRemoteObject implements RemoteJMeterEngine {
     private static final long serialVersionUID = 242L;
 
-    private static final Logger log = LoggerFactory.getLogger(RemoteJMeterEngineImpl.class);
+    private static final Logger log = LogManager.getLogger(RemoteJMeterEngineImpl.class);
 
     static final String JMETER_ENGINE_RMI_NAME = "JMeterEngine"; // $NON-NLS-1$
 

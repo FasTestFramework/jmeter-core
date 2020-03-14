@@ -55,8 +55,8 @@ import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jmeter.util.LocaleChangeEvent;
 import org.apache.jmeter.util.LocaleChangeListener;
 import org.apache.jorphan.collections.HashTree;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * GuiPackage is a static class that provides convenient access to information
@@ -69,7 +69,7 @@ import org.slf4j.LoggerFactory;
  */
 public final class GuiPackage implements LocaleChangeListener, HistoryListener {
 
-    private static final Logger log = LoggerFactory.getLogger(GuiPackage.class);
+    private static final Logger log = LogManager.getLogger(GuiPackage.class);
 
     private static final String SBR_PREFS_KEY = "save_before_run";
 

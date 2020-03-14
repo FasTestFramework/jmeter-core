@@ -32,8 +32,8 @@ import org.apache.jorphan.util.HeapDumper;
 import org.apache.jorphan.util.ThreadDumper;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.config.Configurator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -44,7 +44,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 public class What extends AbstractAction {
-    private static final Logger log = LoggerFactory.getLogger(What.class);
+    private static final Logger log = LogManager.getLogger(What.class);
 
     private static final Set<String> commandSet;
 

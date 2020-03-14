@@ -35,15 +35,15 @@ import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jmeter.util.JSR223TestElement;
 import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.collections.HashTreeTraverser;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Compile JSR223 Test Element that use Compilable script language
  * @since 5.1
  */
 public class CompileJSR223TestElements extends AbstractAction implements MenuCreator {
-    private static final Logger log = LoggerFactory.getLogger(CompileJSR223TestElements.class);
+    private static final Logger log = LogManager.getLogger(CompileJSR223TestElements.class);
 
     private static final MessageFormat MESSAGE_FORMAT =
             new MessageFormat(JMeterUtils.getResString("compilation_errors")); // //$NON-NLS-1$

@@ -32,14 +32,14 @@ import org.apache.jmeter.gui.util.EscapeDialog;
 import org.apache.jmeter.swing.HtmlPane;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.gui.ComponentUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Implements the Help menu item.
  */
 public class Help extends AbstractAction {
-    private static final Logger log = LoggerFactory.getLogger(Help.class);
+    private static final Logger log = LogManager.getLogger(Help.class);
     private static final boolean USE_LOCAL_HELP =
             JMeterUtils.getPropDefault("help.local", false);
     private static final Set<String> commands = new HashSet<>();

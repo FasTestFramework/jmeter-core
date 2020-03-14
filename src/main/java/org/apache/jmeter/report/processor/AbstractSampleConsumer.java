@@ -27,8 +27,8 @@ import org.apache.commons.lang3.Validate;
 import org.apache.jmeter.report.core.Sample;
 import org.apache.jmeter.report.core.SampleException;
 import org.apache.jmeter.report.core.SampleMetadata;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Base class for sample consumer implementations.<br>
@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
 public abstract class AbstractSampleConsumer extends AbstractSampleProcessor
         implements SampleConsumer, SampleProducer {
 
-    private static final Logger LOG = LoggerFactory.getLogger(AbstractSampleConsumer.class);
+    private static final Logger LOG = LogManager.getLogger(AbstractSampleConsumer.class);
 
     /** sample consumer name, used for logging */
     private String name;

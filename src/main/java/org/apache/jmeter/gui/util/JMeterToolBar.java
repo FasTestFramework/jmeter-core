@@ -36,8 +36,8 @@ import org.apache.jmeter.gui.action.ActionRouter;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jmeter.util.LocaleChangeEvent;
 import org.apache.jmeter.util.LocaleChangeListener;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The JMeter main toolbar class
@@ -50,7 +50,7 @@ public class JMeterToolBar extends JToolBar implements LocaleChangeListener {
      */
     private static final long serialVersionUID = 1L;
 
-    private static final Logger log = LoggerFactory.getLogger(JMeterToolBar.class);
+    private static final Logger log = LogManager.getLogger(JMeterToolBar.class);
 
     private static final String TOOLBAR_ENTRY_SEP = ",";  //$NON-NLS-1$
 

@@ -51,8 +51,8 @@ import org.apache.jmeter.testelement.property.ObjectProperty;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jmeter.visualizers.Visualizer;
 import org.apache.jorphan.util.JMeterError;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This class handles all saving of samples.
@@ -85,7 +85,7 @@ public class ResultCollector extends AbstractListenerElement implements SampleLi
             log.info("Shutdown hook ended");
         }
     }
-    private static final Logger log = LoggerFactory.getLogger(ResultCollector.class);
+    private static final Logger log = LogManager.getLogger(ResultCollector.class);
 
     private static final long serialVersionUID = 234L;
 

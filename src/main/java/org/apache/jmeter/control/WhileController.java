@@ -26,13 +26,13 @@ import org.apache.jmeter.testelement.property.StringProperty;
 import org.apache.jmeter.threads.JMeterContextService;
 import org.apache.jmeter.threads.JMeterThread;
 import org.apache.jmeter.threads.JMeterVariables;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 // @see TestWhileController for unit tests
 
 public class WhileController extends GenericController implements Serializable, IteratingController {
-    private static final Logger log = LoggerFactory.getLogger(WhileController.class);
+    private static final Logger log = LogManager.getLogger(WhileController.class);
 
     private static final long serialVersionUID = 233L;
 

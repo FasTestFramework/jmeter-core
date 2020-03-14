@@ -35,8 +35,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.gui.plugin.MenuCreator;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Restart JMeter
@@ -44,7 +44,7 @@ import org.slf4j.LoggerFactory;
  * @since 5.0
  */
 public class Restart extends AbstractActionWithNoRunningTest implements MenuCreator {
-    private static final Logger log = LoggerFactory.getLogger(Restart.class);
+    private static final Logger log = LogManager.getLogger(Restart.class);
 
     /**
      * Sun property pointing the main class and its arguments.

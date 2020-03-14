@@ -26,8 +26,8 @@ import org.apache.jmeter.testelement.property.BooleanProperty;
 import org.apache.jmeter.testelement.property.IntegerProperty;
 import org.apache.jmeter.testelement.property.JMeterProperty;
 import org.apache.jmeter.testelement.property.StringProperty;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Class that implements the Loop Controller, ie iterate infinitely or a configured number of times
@@ -39,7 +39,7 @@ public class LoopController extends GenericController implements Serializable, I
     public static final String LOOPS = "LoopController.loops"; // $NON-NLS-1$
 
     private static final long serialVersionUID = 7833960784370272300L;
-    private static final Logger LOGGER = LoggerFactory.getLogger(LoopController.class);
+    private static final Logger LOGGER = LogManager.getLogger(LoopController.class);
     /**
      * In spite of the name, this is actually used to determine if the loop controller is repeatable.
      *

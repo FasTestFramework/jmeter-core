@@ -31,8 +31,8 @@ import org.apache.jmeter.samplers.Sampler;
 import org.apache.jmeter.testelement.AbstractTestElement;
 import org.apache.jmeter.testelement.TestElement;
 import org.apache.jmeter.threads.TestCompilerHelper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * <p>
@@ -50,7 +50,7 @@ public class GenericController extends AbstractTestElement implements Controller
 
     private static final long serialVersionUID = 235L;
 
-    private static final Logger log = LoggerFactory.getLogger(GenericController.class);
+    private static final Logger log = LogManager.getLogger(GenericController.class);
 
     static final String INDEX_VAR_NAME_SUFFIX = "__idx";
 

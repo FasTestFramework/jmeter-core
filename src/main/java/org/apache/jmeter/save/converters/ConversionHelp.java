@@ -27,8 +27,8 @@ import java.util.Map;
 import org.apache.jmeter.save.SaveService;
 import org.apache.jmeter.testelement.TestElement;
 import org.apache.jmeter.util.NameUpdater;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
@@ -39,7 +39,7 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
  *
  */
 public class ConversionHelp {
-    private static final Logger log = LoggerFactory.getLogger(ConversionHelp.class);
+    private static final Logger log = LogManager.getLogger(ConversionHelp.class);
 
     private static final String CHAR_SET = StandardCharsets.UTF_8.name();
 

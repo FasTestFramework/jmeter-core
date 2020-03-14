@@ -22,15 +22,15 @@ import java.rmi.RemoteException;
 
 import org.apache.jmeter.engine.util.NoThreadClone;
 import org.apache.jmeter.testelement.AbstractTestElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
  */
 public class RemoteSampleListenerWrapper extends AbstractTestElement implements SampleListener, Serializable,
         NoThreadClone {
-    private static final Logger log = LoggerFactory.getLogger(RemoteSampleListenerWrapper.class);
+    private static final Logger log = LogManager.getLogger(RemoteSampleListenerWrapper.class);
 
     private static final long serialVersionUID = 241L;
 

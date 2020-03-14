@@ -23,13 +23,13 @@ import javax.swing.GrayFilter;
 import javax.swing.ImageIcon;
 
 import org.apache.jmeter.gui.GUIFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public final class PluginManager {
     private static final PluginManager instance = new PluginManager();
 
-    private static final Logger log = LoggerFactory.getLogger(PluginManager.class);
+    private static final Logger log = LogManager.getLogger(PluginManager.class);
 
     private PluginManager() {
     }

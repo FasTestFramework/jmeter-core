@@ -29,15 +29,15 @@ import org.apache.jmeter.control.Controller;
 import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.gui.tree.JMeterTreeNode;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Allows to apply naming convention on nodes
  * @since 3.2
  */
 public class ApplyNamingConvention extends AbstractAction {
-    private static final Logger log = LoggerFactory.getLogger(ApplyNamingConvention.class);
+    private static final Logger log = LogManager.getLogger(ApplyNamingConvention.class);
 
     private static final Set<String> commands = new HashSet<>();
 

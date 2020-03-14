@@ -22,8 +22,8 @@ import java.io.File;
 import org.apache.commons.lang3.Validate;
 import org.apache.jmeter.report.core.CsvSampleWriter;
 import org.apache.jmeter.report.core.Sample;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Sample consumed by this consumer are written to a file<br>
@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SampleWriterConsumer extends AbstractSampleConsumer {
 
-    private static final Logger LOG = LoggerFactory.getLogger(SampleWriterConsumer.class);
+    private static final Logger LOG = LogManager.getLogger(SampleWriterConsumer.class);
 
     private File outputFile;
 

@@ -28,8 +28,8 @@ import java.util.Properties;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import jodd.props.Props;
 
@@ -41,7 +41,7 @@ import jodd.props.Props;
  */
 public class ReportGeneratorConfiguration {
 
-    private static final Logger log = LoggerFactory.getLogger(ReportGeneratorConfiguration.class);
+    private static final Logger log = LogManager.getLogger(ReportGeneratorConfiguration.class);
 
     private static final String RANGE_DATE_FORMAT_DEFAULT = "yyyyMMddHHmmss"; //$NON-NLS-1$
 

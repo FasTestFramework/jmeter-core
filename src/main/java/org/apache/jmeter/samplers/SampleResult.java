@@ -35,8 +35,8 @@ import org.apache.jmeter.testelement.TestPlan;
 import org.apache.jmeter.threads.JMeterContext.TestLogicalAction;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 // For unit tests, @see TestSampleResult
 
@@ -50,7 +50,7 @@ public class SampleResult implements Serializable, Cloneable, Searchable {
     private static final long serialVersionUID = 241L;
 
     // Needs to be accessible from Test code
-    static Logger log = LoggerFactory.getLogger(SampleResult.class);
+    static Logger log = LogManager.getLogger(SampleResult.class);
 
     /**
      * The default encoding to be used if not overridden.

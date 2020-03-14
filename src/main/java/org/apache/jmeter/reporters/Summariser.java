@@ -37,8 +37,8 @@ import org.apache.jmeter.threads.JMeterContextService;
 import org.apache.jmeter.threads.JMeterContextService.ThreadCounts;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import org.apache.jmeter.reporters.AutomationPerformanceTestingSummarizedResults;
 
@@ -72,7 +72,7 @@ public class Summariser extends AbstractTestElement
 
     private static final long serialVersionUID = 234L;
 
-    private static final Logger log = LoggerFactory.getLogger(Summariser.class);
+    private static final Logger log = LogManager.getLogger(Summariser.class);
 
     /** interval between summaries (in seconds) default 30 seconds */
     private static final long INTERVAL = JMeterUtils.getPropDefault("summariser.interval", 30); //$NON-NLS-1$

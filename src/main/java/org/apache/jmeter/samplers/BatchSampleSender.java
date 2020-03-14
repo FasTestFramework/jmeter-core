@@ -24,15 +24,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Implements batch reporting for remote testing.
  *
  */
 public class BatchSampleSender extends AbstractSampleSender implements Serializable {
-    private static final Logger log = LoggerFactory.getLogger(BatchSampleSender.class);
+    private static final Logger log = LogManager.getLogger(BatchSampleSender.class);
 
     private static final long serialVersionUID = 241L;
 

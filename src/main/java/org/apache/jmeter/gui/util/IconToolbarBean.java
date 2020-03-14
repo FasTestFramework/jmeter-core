@@ -18,12 +18,12 @@
 package org.apache.jmeter.gui.util;
 
 import org.apache.jmeter.gui.action.ActionNames;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public final class IconToolbarBean {
 
-    private static final Logger log = LoggerFactory.getLogger(IconToolbarBean.class);
+    private static final Logger log = LogManager.getLogger(IconToolbarBean.class);
 
     private static final String ICON_FIELD_SEP = ",";  //$NON-NLS-1$
 

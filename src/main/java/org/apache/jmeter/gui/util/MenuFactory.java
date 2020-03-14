@@ -59,11 +59,11 @@ import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jmeter.visualizers.Printable;
 import org.apache.jorphan.gui.GuiUtils;
 import org.apache.jorphan.reflect.ClassFinder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public final class MenuFactory {
-    private static final Logger log = LoggerFactory.getLogger(MenuFactory.class);
+    private static final Logger log = LogManager.getLogger(MenuFactory.class);
 
     /*
      *  Predefined strings for makeMenu().

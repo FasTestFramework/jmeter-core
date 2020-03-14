@@ -26,15 +26,15 @@ import java.rmi.server.RMIServerSocketFactory;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * RMI Helper class
  * @since 4.0
  */
 public final class RmiUtils {
-    private static final Logger log = LoggerFactory.getLogger(RmiUtils.class);
+    private static final Logger log = LogManager.getLogger(RmiUtils.class);
 
     public static final int DEFAULT_RMI_REGISTRY_PORT = JMeterUtils
             .getPropDefault("server_port", 0); // $NON-NLS-1$

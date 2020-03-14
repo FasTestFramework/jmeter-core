@@ -34,14 +34,14 @@ import org.apache.jmeter.gui.tree.JMeterTreeNode;
 import org.apache.jmeter.testelement.TestElement;
 import org.apache.jmeter.util.JMeterTreeNodeTransferable;
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Implements the Copy menu command
  */
 public class Copy extends AbstractAction {
-    private static final Logger log = LoggerFactory.getLogger(Copy.class);
+    private static final Logger log = LogManager.getLogger(Copy.class);
 
     private static final HashSet<String> commands = new HashSet<>();
 

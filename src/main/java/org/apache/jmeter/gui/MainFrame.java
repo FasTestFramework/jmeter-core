@@ -103,8 +103,8 @@ import org.apache.jmeter.threads.JMeterContextService;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.gui.ComponentUtil;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The main JMeter frame, containing the menu bar, test tree, and an area for
@@ -129,7 +129,7 @@ public class MainFrame extends JFrame implements TestStateListener, Remoteable, 
     private static final boolean DISPLAY_LOGGER_PANEL =
             JMeterUtils.getPropDefault("jmeter.loggerpanel.display", false); // $NON-NLS-1$
 
-    private static final Logger log = LoggerFactory.getLogger(MainFrame.class);
+    private static final Logger log = LogManager.getLogger(MainFrame.class);
 
     private static final String OS_NAME = System.getProperty("os.name");// $NON-NLS-1$
 

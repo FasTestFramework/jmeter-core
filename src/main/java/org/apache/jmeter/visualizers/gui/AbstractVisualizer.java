@@ -40,8 +40,8 @@ import org.apache.jmeter.testelement.TestElement;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jmeter.visualizers.Visualizer;
 import org.apache.jorphan.gui.ComponentUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This is the base class for JMeter GUI components which can display test
@@ -102,7 +102,7 @@ public abstract class AbstractVisualizer
     private static final long serialVersionUID = 241L;
 
     /** Logging. */
-    private static final Logger log = LoggerFactory.getLogger(AbstractVisualizer.class);
+    private static final Logger log = LogManager.getLogger(AbstractVisualizer.class);
 
     /** File Extensions */
     private static final String[] EXTS = { ".xml", ".jtl", ".csv" }; // $NON-NLS-1$ $NON-NLS-2$ $NON-NLS-3$

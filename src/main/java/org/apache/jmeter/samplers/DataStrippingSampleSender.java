@@ -22,8 +22,8 @@ import java.io.Serializable;
 import java.rmi.RemoteException;
 
 import org.apache.jmeter.util.JMeterUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The standard remote sample reporting should be more friendly to the main purpose of
@@ -37,7 +37,7 @@ public class DataStrippingSampleSender extends AbstractSampleSender implements S
     /** empty array which can be returned instead of null */
     private static final byte[] EMPTY_BA = new byte[0];
 
-    private static final Logger log = LoggerFactory.getLogger(DataStrippingSampleSender.class);
+    private static final Logger log = LogManager.getLogger(DataStrippingSampleSender.class);
 
     private static final boolean DEFAULT_STRIP_ALSO_ON_ERROR = true;
 

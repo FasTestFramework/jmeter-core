@@ -35,11 +35,11 @@ import org.apache.jmeter.reporters.ResultCollector;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.collections.SearchByClass;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public abstract class AbstractAction implements Command {
-    private static final Logger log = LoggerFactory.getLogger(AbstractAction.class);
+    private static final Logger log = LogManager.getLogger(AbstractAction.class);
 
     private enum ActionOnFile {
         APPEND,

@@ -34,15 +34,15 @@ import org.apache.jmeter.threads.JMeterContext;
 import org.apache.jmeter.threads.JMeterContextService;
 import org.apache.jmeter.threads.JMeterVariables;
 import org.apache.jorphan.util.JOrphanUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public abstract class BSFTestElement extends ScriptingTestElement
     implements Serializable
 {
     private static final long serialVersionUID = 235L;
 
-    private static final Logger log = LoggerFactory.getLogger(BSFTestElement.class);
+    private static final Logger log = LogManager.getLogger(BSFTestElement.class);
 
     static {
         log.info("Registering JMeter version of JavaScript engine as work-round for BSF-22");
@@ -66,7 +66,7 @@ public abstract class BSFTestElement extends ScriptingTestElement
         final String fileName = getFilename();
         final String scriptParameters = getParameters();
         // Use actual class name for log
-        final Logger logger = LoggerFactory.getLogger(getClass());
+        final Logger logger = LogManager.getLogger(getClass());
         mgr.declareBean("log", logger, Logger.class); // $NON-NLS-1$
         mgr.declareBean("Label",label, String.class); // $NON-NLS-1$
         mgr.declareBean("FileName",fileName, String.class); // $NON-NLS-1$

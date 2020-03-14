@@ -23,8 +23,8 @@ import java.rmi.RemoteException;
 import org.apache.jmeter.engine.util.NoThreadClone;
 import org.apache.jmeter.testelement.AbstractTestElement;
 import org.apache.jmeter.testelement.ThreadListener;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * server side wrapper, used to notify RMI client
@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
  */
 public class RemoteThreadsListenerWrapper extends AbstractTestElement implements ThreadListener, Serializable,
         NoThreadClone {
-    private static final Logger log = LoggerFactory.getLogger(RemoteThreadsListenerWrapper.class);
+    private static final Logger log = LogManager.getLogger(RemoteThreadsListenerWrapper.class);
 
     private static final long serialVersionUID = 241L;
 

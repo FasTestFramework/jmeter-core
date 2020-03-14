@@ -33,14 +33,14 @@ import org.apache.jmeter.services.FileServer;
 import org.apache.jmeter.threads.JMeterContextService;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Class to run remote tests from the client JMeter and collect remote samples
  */
 public class ClientJMeterEngine implements JMeterEngine {
-    private static final Logger log = LoggerFactory.getLogger(ClientJMeterEngine.class);
+    private static final Logger log = LogManager.getLogger(ClientJMeterEngine.class);
 
     private static final Object LOCK = new Object();
 
